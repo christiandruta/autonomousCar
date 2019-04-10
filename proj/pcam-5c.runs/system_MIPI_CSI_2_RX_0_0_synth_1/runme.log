@@ -1,0 +1,1553 @@
+
+*** Running vivado
+    with args -log system_MIPI_CSI_2_RX_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_MIPI_CSI_2_RX_0_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_MIPI_CSI_2_RX_0_0.tcl -notrace
+Command: synth_design -top system_MIPI_CSI_2_RX_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8960 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 440.551 ; gain = 128.184
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port idatain is neither a static name nor a globally static expression [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:148]
+WARNING: [Synth 8-1565] actual for formal port s_axis_aresetn is neither a static name nor a globally static expression [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:581]
+WARNING: [Synth 8-1565] actual for formal port rbrst is neither a static name nor a globally static expression [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_Rx.vhd:279]
+INFO: [Synth 8-638] synthesizing module 'system_MIPI_CSI_2_RX_0_0' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/synth/system_MIPI_CSI_2_RX_0_0.vhd:112]
+	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter kVersionMajor bound to: 1 - type: integer 
+	Parameter kVersionMinor bound to: 1 - type: integer 
+	Parameter kTargetDT bound to: RAW10 - type: string 
+	Parameter kGenerateAXIL bound to: 1 - type: bool 
+	Parameter kDebug bound to: 0 - type: bool 
+	Parameter kLaneCount bound to: 2 - type: integer 
+	Parameter C_M_AXIS_COMPONENT_WIDTH bound to: 10 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 40 - type: integer 
+	Parameter C_M_MAX_SAMPLES_PER_CLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mipi_csi2_rx_top' declared at 'c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_RxTop.vhd:46' bound to instance 'U0' of component 'mipi_csi2_rx_top' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/synth/system_MIPI_CSI_2_RX_0_0.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'mipi_csi2_rx_top' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_RxTop.vhd:131]
+	Parameter kVersionMajor bound to: 1 - type: integer 
+	Parameter kVersionMinor bound to: 1 - type: integer 
+	Parameter kTargetDT bound to: RAW10 - type: string 
+	Parameter kGenerateAXIL bound to: 1 - type: bool 
+	Parameter kDebug bound to: 0 - type: bool 
+	Parameter kLaneCount bound to: 2 - type: integer 
+	Parameter C_M_AXIS_COMPONENT_WIDTH bound to: 10 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 40 - type: integer 
+	Parameter C_M_MAX_SAMPLES_PER_CLOCK bound to: 4 - type: integer 
+	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'MIPI_CSI2_Rx' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_Rx.vhd:77]
+	Parameter kTargetDT bound to: RAW10 - type: string 
+	Parameter kDebug bound to: 0 - type: bool 
+	Parameter kLaneCount bound to: 2 - type: integer 
+	Parameter C_M_AXIS_COMPONENT_WIDTH bound to: 10 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 40 - type: integer 
+	Parameter C_M_MAX_SAMPLES_PER_CLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsyncReset.vhd:65]
+	Parameter kPolarity bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsync.vhd:66]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+	Parameter kResetPolarity bound to: 1'b0 
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsync.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (1#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsync.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (2#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsyncReset.vhd:65]
+	Parameter kMaxLaneCount bound to: 4 - type: integer 
+	Parameter kLaneCount bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'LM' declared at 'c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:48' bound to instance 'LM_inst' of component 'LM' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_Rx.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'LM' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:79]
+	Parameter kMaxLaneCount bound to: 4 - type: integer 
+	Parameter kLaneCount bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SimpleFIFO' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SimpleFIFO.vhd:62]
+	Parameter kDataWidth bound to: 11 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleFIFO' (3#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SimpleFIFO.vhd:62]
+WARNING: [Synth 8-3848] Net dbgLMLane[2][rbSkwRdEn] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[2][rbSkwWrEn] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[2][rbSkwFull] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[2][rbActiveHS] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[2][rbSyncHS] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[2][rbValidHS] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[2][rbDataHS] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[3][rbSkwRdEn] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[3][rbSkwWrEn] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[3][rbSkwFull] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[3][rbActiveHS] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[3][rbSyncHS] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[3][rbValidHS] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+WARNING: [Synth 8-3848] Net dbgLMLane[3][rbDataHS] in module/entity LM does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'LM' (4#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:79]
+	Parameter kMaxLaneCount bound to: 4 - type: integer 
+	Parameter kLaneCount bound to: 2 - type: integer 
+	Parameter kTargetDT bound to: RAW10 - type: string 
+INFO: [Synth 8-3491] module 'LLP' declared at 'c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:48' bound to instance 'LLP_inst' of component 'LLP' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_Rx.vhd:291]
+INFO: [Synth 8-638] synthesizing module 'LLP' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:79]
+	Parameter kMaxLaneCount bound to: 4 - type: integer 
+	Parameter kLaneCount bound to: 2 - type: integer 
+	Parameter kTargetDT bound to: RAW10 - type: string 
+INFO: [Synth 8-638] synthesizing module 'ResetBridge__parameterized0' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsyncReset.vhd:65]
+	Parameter kPolarity bound to: 1'b1 
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsync.vhd:66]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+	Parameter kResetPolarity bound to: 1'b1 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (4#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsync.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge__parameterized0' (4#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsyncReset.vhd:65]
+INFO: [Synth 8-3491] module 'cdc_fifo' declared at 'c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/synth/cdc_fifo.vhd:59' bound to instance 'DataFIFO' of component 'cdc_fifo' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'cdc_fifo' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/synth/cdc_fifo.vhd:77]
+	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 18 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 18 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 0 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 1 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 4kx4 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 2 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 3 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 1022 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 1021 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_RD_DEPTH bound to: 1024 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_DEPTH bound to: 1024 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 1 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 4 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 12 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 11 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 12 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 12 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 11 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 12 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 512x72 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 37 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 32 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 5 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 15 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 15 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 15 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 31 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 13 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1021 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 13 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 13 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1021 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 29 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_1' declared at 'c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38483' bound to instance 'U0' of component 'fifo_generator_v13_2_1' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/synth/cdc_fifo.vhd:555]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_async_rst' [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1177]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1228]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_async_rst' (5#1) [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1177]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_single' [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:205]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_single' (6#1) [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_gray' [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:390]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_gray' (11#1) [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-256] done synthesizing module 'cdc_fifo' (26#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/synth/cdc_fifo.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'ECC' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/ECC.vhd:63]
+INFO: [Synth 8-226] default block is never used [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/ECC.vhd:160]
+WARNING: [Synth 8-6014] Unused sequential element parity_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/ECC.vhd:99]
+WARNING: [Synth 8-6014] Unused sequential element sParity_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/ECC.vhd:107]
+INFO: [Synth 8-256] done synthesizing module 'ECC' (27#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/ECC.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'CRC16' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/CRC16_behavioral.vhd:63]
+	Parameter kLaneCount bound to: 4 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element crc_temp_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/CRC16_behavioral.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'CRC16' (28#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/CRC16_behavioral.vhd:63]
+INFO: [Synth 8-3491] module 'line_buffer' declared at 'c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/synth/line_buffer.v:57' bound to instance 'LineBufferFIFO' of component 'line_buffer' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:578]
+INFO: [Synth 8-638] synthesizing module 'line_buffer' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/synth/line_buffer.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_v1_1_16_axis_data_fifo' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_data_fifo_v1_1_vl_rfs.v:62]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 40 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000010010011 
+	Parameter C_FIFO_DEPTH bound to: 2048 - type: integer 
+	Parameter C_FIFO_MODE bound to: 1 - type: integer 
+	Parameter C_IS_ACLK_ASYNC bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_ACLKEN_CONV_MODE bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TREADY_EXISTS bound to: 1 - type: integer 
+	Parameter P_TDATA_EXISTS bound to: 1 - type: integer 
+	Parameter P_TSTRB_EXISTS bound to: 0 - type: integer 
+	Parameter P_TKEEP_EXISTS bound to: 0 - type: integer 
+	Parameter P_TLAST_EXISTS bound to: 1 - type: integer 
+	Parameter P_TID_EXISTS bound to: 0 - type: integer 
+	Parameter P_TDEST_EXISTS bound to: 0 - type: integer 
+	Parameter P_TUSER_EXISTS bound to: 1 - type: integer 
+	Parameter P_AXIS_PAYLOAD_WIDTH bound to: 42 - type: integer 
+	Parameter P_WR_PNTR_WIDTH bound to: 11 - type: integer 
+	Parameter P_FIFO_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter P_FIFO_TYPE bound to: 1 - type: integer 
+	Parameter P_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter P_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter P_MSGON_VAL bound to: 1 - type: integer 
+	Parameter P_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter LP_S_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter LP_M_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH bound to: 18 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_DOUT_WIDTH bound to: 18 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 11 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_data_fifo_v1_1_vl_rfs.v:181]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
+	Parameter C_TDATA_WIDTH bound to: 40 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter C_S_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter C_M_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 54 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 40 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 54 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 40 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 45 - type: integer 
+	Parameter P_TLAST_INDX bound to: 50 - type: integer 
+	Parameter P_TID_INDX bound to: 51 - type: integer 
+	Parameter P_TDEST_INDX bound to: 52 - type: integer 
+	Parameter P_TUSER_INDX bound to: 53 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (29#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 40 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 54 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 40 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 45 - type: integer 
+	Parameter P_TLAST_INDX bound to: 50 - type: integer 
+	Parameter P_TID_INDX bound to: 51 - type: integer 
+	Parameter P_TDEST_INDX bound to: 52 - type: integer 
+	Parameter P_TUSER_INDX bound to: 53 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (30#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' (31#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_sync_rst' [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1045]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1097]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_sync_rst' (32#1) [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1045]
+INFO: [Synth 8-256] done synthesizing module 'axis_data_fifo_v1_1_16_axis_data_fifo' (45#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl/axis_data_fifo_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-256] done synthesizing module 'line_buffer' (46#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/synth/line_buffer.v:57]
+WARNING: [Synth 8-6014] Unused sequential element mDataType_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:324]
+WARNING: [Synth 8-3848] Net dbgLLP[rbOvf] in module/entity LLP does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'LLP' (47#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:79]
+WARNING: [Synth 8-3936] Found unconnected internal register 'aDEnableInt_reg' and it is trimmed from '4' to '2' bits. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_Rx.vhd:209]
+INFO: [Synth 8-256] done synthesizing module 'MIPI_CSI2_Rx' (48#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_Rx.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'MIPI_CSI_2_RX_S_AXI_LITE' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI_2_RX_v1_0_S_AXI_LITE.vhd:119]
+	Parameter kVersionMajor bound to: 1 - type: integer 
+	Parameter kVersionMinor bound to: 1 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI_2_RX_v1_0_S_AXI_LITE.vhd:245]
+INFO: [Synth 8-256] done synthesizing module 'MIPI_CSI_2_RX_S_AXI_LITE' (49#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI_2_RX_v1_0_S_AXI_LITE.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsync.vhd:66]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+	Parameter kResetPolarity bound to: 1'b1 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (49#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/SyncAsync.vhd:66]
+WARNING: [Synth 8-3848] Net aD2Enable in module/entity mipi_csi2_rx_top does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_RxTop.vhd:86]
+WARNING: [Synth 8-3848] Net aD3Enable in module/entity mipi_csi2_rx_top does not have driver. [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_RxTop.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'mipi_csi2_rx_top' (50#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/MIPI_CSI2_RxTop.vhd:131]
+INFO: [Synth 8-256] done synthesizing module 'system_MIPI_CSI_2_RX_0_0' (51#1) [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/synth/system_MIPI_CSI_2_RX_0_0.vhd:112]
+WARNING: [Synth 8-3331] design MIPI_CSI_2_RX_S_AXI_LITE has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design MIPI_CSI_2_RX_S_AXI_LITE has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design MIPI_CSI_2_RX_S_AXI_LITE has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design MIPI_CSI_2_RX_S_AXI_LITE has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design MIPI_CSI_2_RX_S_AXI_LITE has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design MIPI_CSI_2_RX_S_AXI_LITE has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port ACLK
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port ARESETN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port S_ACLKEN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port M_ACLKEN
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port SRST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port SAFETY_CKT_WR_RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[10]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[9]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[8]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[7]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[6]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[5]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[4]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[3]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[2]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[1]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[0]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[10]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[9]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[8]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[7]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[6]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[5]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[4]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[3]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[2]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[1]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[0]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_bin_cntr__parameterized0 has unconnected port RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port WR_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port WR_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port RD_EN
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port WR_RST_BUSY
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port EMPTY
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port ALMOST_EMPTY
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[10]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[9]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[8]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[7]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[6]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[5]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[4]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[3]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[2]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[1]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[0]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[10]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[9]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[8]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[7]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[6]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[5]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[10]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[9]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[8]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[7]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[6]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[5]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_updn_cntr has unconnected port RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_fwft__parameterized0 has unconnected port RD_RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_fwft__parameterized0 has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_fwft__parameterized0 has unconnected port RAM_ALMOST_EMPTY
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[10]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[9]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[8]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[7]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[6]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[5]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[4]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[3]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[2]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[1]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[0]
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_bin_cntr__parameterized0 has unconnected port RST
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_logic__parameterized0 has unconnected port RD_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_logic__parameterized0 has unconnected port RD_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_logic__parameterized0 has unconnected port RD_RST_BUSY
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_logic__parameterized0 has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_logic__parameterized0 has unconnected port ALMOST_FULL_FB
+WARNING: [Synth 8-3331] design fifo_generator_v13_2_1_rd_logic__parameterized0 has unconnected port FULL
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/line_buffer/line_buffer.xdc] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst'
+Finished Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/line_buffer/line_buffer.xdc] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_rxclk_lane'. The XDC file c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_rxclk_lane/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_rxclk'. The XDC file c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_rxclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_vidclk'. The XDC file c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_vidclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo.xdc] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0'
+Finished Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo.xdc] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0'
+Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo_clocks.xdc] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0'
+Finished Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo_clocks.xdc] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx_clocks.xdc] for cell 'U0'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_MIPI_CSI_2_RX_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 842.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:42 ; elapsed = 00:01:45 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:42 ; elapsed = 00:01:45 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst. (constraint file  C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1/dont_touch.xdc, line 25).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1/dont_touch.xdc, line 29).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0. (constraint file  C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1/dont_touch.xdc, line 55).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /rd_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /wr_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/\gen_fifo_generator.fifo_generator_inst /inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:42 ; elapsed = 00:01:45 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "rbEnInt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rbByteCnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sReady" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sErrSyndrome" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sValid" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "sError" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "sHeaderOut" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "mKeep" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "mCRC_Sent" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element mWordCount_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:348]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:44 ; elapsed = 00:01:47 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     16 Bit         XORs := 32    
+	   2 Input      6 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 112   
+	   8 Input      1 Bit         XORs := 2     
+	   7 Input      1 Bit         XORs := 1     
+	  14 Input      1 Bit         XORs := 1     
+	  13 Input      1 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 1     
+	  12 Input      1 Bit         XORs := 1     
+	  11 Input      1 Bit         XORs := 1     
++---Registers : 
+	               42 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               37 Bit    Registers := 2     
+	               32 Bit    Registers := 6     
+	               31 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 8     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 22    
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 18    
+	                1 Bit    Registers := 83    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	  27 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 9     
+	   3 Input     31 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 43    
+	   3 Input     16 Bit        Muxes := 1     
+	   9 Input     11 Bit        Muxes := 4     
+	   6 Input     11 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	  27 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 9     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 11    
+	   5 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 47    
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 5     
+	  27 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SyncAsync 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module SimpleFIFO 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module LM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 7     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+Module SyncAsync__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module xpm_cdc_async_rst 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module xpm_cdc_single 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module fifo_generator_v13_2_1_reset_blk_ramfifo 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+Module fifo_generator_v13_2_1_dmem 
+Detailed RTL Component Info : 
++---Registers : 
+	               37 Bit    Registers := 1     
+Module fifo_generator_v13_2_1_memory 
+Detailed RTL Component Info : 
++---Registers : 
+	               37 Bit    Registers := 1     
+Module xpm_cdc_gray 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      5 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	                5 Bit    Registers := 4     
+Module fifo_generator_v13_2_1_rd_bin_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 2     
+Module fifo_generator_v13_2_1_compare 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
+Module fifo_generator_v13_2_1_rd_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module fifo_generator_v13_2_1_rd_fwft 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 2     
+Module fifo_generator_v13_2_1_wr_bin_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 3     
+Module fifo_generator_v13_2_1_wr_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module ECC 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      6 Bit         XORs := 2     
+	   8 Input      1 Bit         XORs := 2     
+	   7 Input      1 Bit         XORs := 1     
+	  14 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
+	  13 Input      1 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 1     
+	  12 Input      1 Bit         XORs := 1     
+	  11 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	  27 Input     32 Bit        Muxes := 1     
+	  27 Input      5 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	  27 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module CRC16 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     16 Bit         XORs := 32    
+	   2 Input      1 Bit         XORs := 32    
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 35    
+	   2 Input      1 Bit        Muxes := 3     
+Module xpm_cdc_sync_rst 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module fifo_generator_v13_2_1_reset_blk_ramfifo__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+Module blk_mem_gen_v8_4_1_blk_mem_gen_prim_width 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_v8_4_1_blk_mem_gen_prim_width__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_v8_4_1_blk_mem_gen_prim_width__parameterized1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module fifo_generator_v13_2_1_memory__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               42 Bit    Registers := 1     
+Module fifo_generator_v13_2_1_rd_bin_cntr__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+Module fifo_generator_v13_2_1_compare__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 11    
+Module fifo_generator_v13_2_1_rd_status_flags_ss 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module fifo_generator_v13_2_1_rd_fwft__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 2     
+Module fifo_generator_v13_2_1_dc_ss_fwft 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module fifo_generator_v13_2_1_wr_bin_cntr__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+Module fifo_generator_v13_2_1_wr_status_flags_ss 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module LLP 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 9     
+	   3 Input     31 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 8     
+	   3 Input     16 Bit        Muxes := 1     
+	   9 Input     11 Bit        Muxes := 4     
+	   6 Input     11 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 2     
+Module MIPI_CSI2_Rx 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module MIPI_CSI_2_RX_S_AXI_LITE 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module SyncAsync__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module mipi_csi2_rx_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "mCRC_Sent" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element mWordCount_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LLP.vhd:348]
+WARNING: [Synth 8-6014] Unused sequential element MIPI_CSI2_Rx_inst/LM_inst/rbErrSkew_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:195]
+WARNING: [Synth 8-6014] Unused sequential element MIPI_CSI2_Rx_inst/LM_inst/rbErrOvf_reg was removed.  [c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ipshared/1a11/hdl/LM.vhd:208]
+INFO: [Synth 8-3886] merging instance 'U0/YesAXILITE.AXI_Lite_Control/axi_rresp_reg[0]' (FDRE) to 'U0/YesAXILITE.AXI_Lite_Control/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\YesAXILITE.AXI_Lite_Control/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/YesAXILITE.AXI_Lite_Control/axi_bresp_reg[0]' (FDRE) to 'U0/YesAXILITE.AXI_Lite_Control/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\YesAXILITE.AXI_Lite_Control/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/aClkEnableInt_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/aDEnableInt_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/aDEnableInt_reg[1]' (FD) to 'U0/MIPI_CSI2_Rx_inst/aDEnableInt_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/rbByteCnt_reg[1]__0' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/rbByteCnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/rbByteCnt_reg[0]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/rbByteCnt_reg[0]__0'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\MIPI_CSI2_Rx_inst/LM_inst/rbByteCnt_reg[0]__0 )
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[31]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[30]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[29]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[28]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[27]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[26]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[25]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[24]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[7]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/ECCx/sHeaderOut_reg[6]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[15]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[14]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[13]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[12]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[11]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[10]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[9]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[8]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[7]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[6]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[5]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[4]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[3]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[2]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRC16x/crc_reg[0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mReg_Tkeep_reg[3]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mReg_Tkeep_reg[2]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mReg_Tkeep_reg[1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mReg_Tkeep_reg[0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[30]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[29]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[28]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[27]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[26]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[25]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[24]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[23]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[22]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[21]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[20]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[19]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[18]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[17]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[16]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[15]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[14]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[13]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[12]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[11]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[10]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[9]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[8]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[7]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[6]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[5]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[4]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[3]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[2]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/CRCRemains_reg[0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[15]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[14]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[13]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[12]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[11]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[10]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[9]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[8]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[7]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[6]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[5]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[4]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[3]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[2]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/mCRC_Sent_reg[0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/pix_mux_reg[3][1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/pix_mux_reg[3][0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/pix_mux_reg[0][1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/pix_mux_reg[0][0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/pix_mux_reg[1][1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/pix_mux_reg[1][0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/pix_mux_reg[2][1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/pix_mux_reg[2][0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/dbgLLP_reg[mFmt_cnt][2]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/dbgLLP_reg[mFmt_cnt][1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LLP_inst/dbgLLP_reg[mFmt_cnt][0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (YesAXILITE.AXI_Lite_Control/axi_bresp_reg[1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (YesAXILITE.AXI_Lite_Control/axi_araddr_reg[1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (YesAXILITE.AXI_Lite_Control/axi_araddr_reg[0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (YesAXILITE.AXI_Lite_Control/axi_awaddr_reg[1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (YesAXILITE.AXI_Lite_Control/axi_awaddr_reg[0]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (YesAXILITE.AXI_Lite_Control/axi_rresp_reg[1]) is unused and will be removed from module mipi_csi2_rx_top.
+WARNING: [Synth 8-3332] Sequential element (MIPI_CSI2_Rx_inst/LM_inst/rbByteCnt_reg[0]__0) is unused and will be removed from module mipi_csi2_rx_top.
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg_rep[3]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg_rep[4]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg_rep[2]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg_rep[1]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg_rep[0]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/iRdA_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg_rep[3]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg_rep[4]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg_rep[2]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg_rep[1]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg_rep[0]' (FDRE) to 'U0/MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/iRdA_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:47 ; elapsed = 00:01:51 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++--------------------------------------------+------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|Module Name                                 | RTL Object                                                                               | Inference      | Size (Depth x Width) | Primitives   | 
++--------------------------------------------+------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|U0/\MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO /U0 | inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 37              | RAM32M x 7   | 
+|U0                                          | MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/FIFO_reg                            | Implied        | 32 x 11              | RAM32M x 2   | 
+|U0                                          | MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/FIFO_reg                            | Implied        | 32 x 11              | RAM32M x 2   | 
++--------------------------------------------+------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:55 ; elapsed = 00:01:59 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:01:59 . Memory (MB): peak = 842.145 ; gain = 529.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++--------------------------------------------+------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|Module Name                                 | RTL Object                                                                               | Inference      | Size (Depth x Width) | Primitives   | 
++--------------------------------------------+------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|U0/\MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO /U0 | inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 37              | RAM32M x 7   | 
+|U0                                          | MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[0].DeskewFIFOx/FIFO_reg                            | Implied        | 32 x 11              | RAM32M x 2   | 
+|U0                                          | MIPI_CSI2_Rx_inst/LM_inst/DeskewFIFOs[1].DeskewFIFOx/FIFO_reg                            | Implied        | 32 x 11              | RAM32M x 2   | 
++--------------------------------------------+------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.POR_B_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.POR_B_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.POR_A_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.POR_B_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.POR_B_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.POR_B_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.POR_A_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.POR_B_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.POR_B_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.POR_A_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_D_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_D_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg'
+INFO: [Synth 8-3886] merging instance 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg' (FD) to 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_D_reg'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 848.203 ; gain = 535.836
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 848.203 ; gain = 535.836
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 848.203 ; gain = 535.836
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 848.203 ; gain = 535.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 848.203 ; gain = 535.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 848.203 ; gain = 535.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 848.203 ; gain = 535.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name            | RTL Name                                                                                                                                                                                                          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fifo_generator_v13_2_1 | inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     7|
+|2     |LUT1     |    21|
+|3     |LUT2     |    50|
+|4     |LUT3     |   134|
+|5     |LUT4     |    82|
+|6     |LUT5     |    77|
+|7     |LUT6     |   108|
+|8     |MUXCY    |    24|
+|9     |RAM32M   |    11|
+|10    |RAMB18E1 |     1|
+|11    |RAMB36E1 |     2|
+|12    |SRL16E   |     1|
+|13    |FDCE     |    39|
+|14    |FDPE     |    28|
+|15    |FDRE     |   606|
+|16    |FDSE     |    20|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+------+
+|      |Instance                                                                                     |Module                                                        |Cells |
++------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+------+
+|1     |top                                                                                          |                                                              |  1211|
+|2     |  U0                                                                                         |mipi_csi2_rx_top                                              |  1211|
+|3     |    MIPI_CSI2_Rx_inst                                                                        |MIPI_CSI2_Rx                                                  |  1083|
+|4     |      LLP_inst                                                                               |LLP                                                           |   883|
+|5     |        DataFIFO                                                                             |cdc_fifo                                                      |   235|
+|6     |          U0                                                                                 |fifo_generator_v13_2_1                                        |   235|
+|7     |            inst_fifo_gen                                                                    |fifo_generator_v13_2_1_synth                                  |   235|
+|8     |              \gaxis_fifo.gaxisf.axisf                                                       |fifo_generator_v13_2_1_fifo_generator_top                     |   235|
+|9     |                \grf.rf                                                                      |fifo_generator_v13_2_1_fifo_generator_ramfifo                 |   235|
+|10    |                  \gntv_or_sync_fifo.gcx.clkx                                                |fifo_generator_v13_2_1_clk_x_pntrs                            |    60|
+|11    |                    wr_pntr_cdc_inst                                                         |xpm_cdc_gray__1                                               |    28|
+|12    |                    rd_pntr_cdc_inst                                                         |xpm_cdc_gray                                                  |    28|
+|13    |                  \gntv_or_sync_fifo.gl0.rd                                                  |fifo_generator_v13_2_1_rd_logic                               |    35|
+|14    |                    \gr1.gr1_int.rfwft                                                       |fifo_generator_v13_2_1_rd_fwft                                |    17|
+|15    |                    \gras.rsts                                                               |fifo_generator_v13_2_1_rd_status_flags_as                     |     2|
+|16    |                    rpntr                                                                    |fifo_generator_v13_2_1_rd_bin_cntr                            |    16|
+|17    |                  \gntv_or_sync_fifo.gl0.wr                                                  |fifo_generator_v13_2_1_wr_logic                               |    30|
+|18    |                    \gwas.wsts                                                               |fifo_generator_v13_2_1_wr_status_flags_as                     |     5|
+|19    |                    wpntr                                                                    |fifo_generator_v13_2_1_wr_bin_cntr                            |    25|
+|20    |                  \gntv_or_sync_fifo.mem                                                     |fifo_generator_v13_2_1_memory                                 |    81|
+|21    |                    \gdm.dm_gen.dm                                                           |fifo_generator_v13_2_1_dmem                                   |    44|
+|22    |                  rstblk                                                                     |fifo_generator_v13_2_1_reset_blk_ramfifo                      |    29|
+|23    |                    \ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst                     |xpm_cdc_async_rst__1                                          |     2|
+|24    |                    \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst             |xpm_cdc_async_rst                                             |     2|
+|25    |                    \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd  |xpm_cdc_single__1                                             |     4|
+|26    |                    \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr  |xpm_cdc_single                                                |     4|
+|27    |        LineBufferFIFO                                                                       |line_buffer                                                   |   240|
+|28    |          inst                                                                               |axis_data_fifo_v1_1_16_axis_data_fifo                         |   240|
+|29    |            \gen_fifo_generator.fifo_generator_inst                                          |fifo_generator_v13_2_1__parameterized0                        |   240|
+|30    |              inst_fifo_gen                                                                  |fifo_generator_v13_2_1_synth__parameterized0                  |   240|
+|31    |                \gaxis_fifo.gaxisf.axisf                                                     |fifo_generator_v13_2_1_fifo_generator_top__parameterized0     |   240|
+|32    |                  \grf.rf                                                                    |fifo_generator_v13_2_1_fifo_generator_ramfifo__parameterized0 |   240|
+|33    |                    \gntv_or_sync_fifo.gl0.rd                                                |fifo_generator_v13_2_1_rd_logic__parameterized0               |    99|
+|34    |                      \gr1.gdcf.dc                                                           |fifo_generator_v13_2_1_dc_ss_fwft                             |    12|
+|35    |                        dc                                                                   |fifo_generator_v13_2_1_updn_cntr                              |    12|
+|36    |                      \gr1.gr1_int.rfwft                                                     |fifo_generator_v13_2_1_rd_fwft__parameterized0                |    34|
+|37    |                      \grss.rsts                                                             |fifo_generator_v13_2_1_rd_status_flags_ss                     |    15|
+|38    |                        c1                                                                   |fifo_generator_v13_2_1_compare__parameterized0_8              |     7|
+|39    |                        c2                                                                   |fifo_generator_v13_2_1_compare__parameterized0_9              |     6|
+|40    |                      rpntr                                                                  |fifo_generator_v13_2_1_rd_bin_cntr__parameterized0            |    38|
+|41    |                    \gntv_or_sync_fifo.gl0.wr                                                |fifo_generator_v13_2_1_wr_logic__parameterized0               |    73|
+|42    |                      \gwss.wsts                                                             |fifo_generator_v13_2_1_wr_status_flags_ss                     |    19|
+|43    |                        c0                                                                   |fifo_generator_v13_2_1_compare__parameterized0                |     7|
+|44    |                        c1                                                                   |fifo_generator_v13_2_1_compare__parameterized0_7              |     6|
+|45    |                      wpntr                                                                  |fifo_generator_v13_2_1_wr_bin_cntr__parameterized0            |    54|
+|46    |                    \gntv_or_sync_fifo.mem                                                   |fifo_generator_v13_2_1_memory__parameterized0                 |    53|
+|47    |                      \gbm.gbmg.gbmga.ngecc.bmg                                              |blk_mem_gen_v8_4_1                                            |    11|
+|48    |                        inst_blk_mem_gen                                                     |blk_mem_gen_v8_4_1_synth                                      |    11|
+|49    |                          \gnbram.gnativebmg.native_blk_mem_gen                              |blk_mem_gen_v8_4_1_blk_mem_gen_top                            |    11|
+|50    |                            \valid.cstr                                                      |blk_mem_gen_v8_4_1_blk_mem_gen_generic_cstr                   |    11|
+|51    |                              \ramloop[0].ram.r                                              |blk_mem_gen_v8_4_1_blk_mem_gen_prim_width                     |     1|
+|52    |                                \prim_noinit.ram                                             |blk_mem_gen_v8_4_1_blk_mem_gen_prim_wrapper                   |     1|
+|53    |                              \ramloop[1].ram.r                                              |blk_mem_gen_v8_4_1_blk_mem_gen_prim_width__parameterized0     |     1|
+|54    |                                \prim_noinit.ram                                             |blk_mem_gen_v8_4_1_blk_mem_gen_prim_wrapper__parameterized0   |     1|
+|55    |                              \ramloop[2].ram.r                                              |blk_mem_gen_v8_4_1_blk_mem_gen_prim_width__parameterized1     |     9|
+|56    |                                \prim_noinit.ram                                             |blk_mem_gen_v8_4_1_blk_mem_gen_prim_wrapper__parameterized1   |     2|
+|57    |                    rstblk                                                                   |fifo_generator_v13_2_1_reset_blk_ramfifo__parameterized0      |    15|
+|58    |                      \ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst          |xpm_cdc_sync_rst                                              |     5|
+|59    |        ECCx                                                                                 |ECC                                                           |   159|
+|60    |        SyncMReset                                                                           |ResetBridge__parameterized0_3                                 |    14|
+|61    |          SyncAsyncx                                                                         |SyncAsync__parameterized0_6                                   |    14|
+|62    |        SyncSReset                                                                           |ResetBridge__parameterized0_4                                 |     2|
+|63    |          SyncAsyncx                                                                         |SyncAsync__parameterized0_5                                   |     2|
+|64    |      LM_inst                                                                                |LM                                                            |   180|
+|65    |        \DeskewFIFOs[0].DeskewFIFOx                                                          |SimpleFIFO                                                    |    49|
+|66    |        \DeskewFIFOs[1].DeskewFIFOx                                                          |SimpleFIFO_2                                                  |    41|
+|67    |      SyncAsyncEnable                                                                        |SyncAsync                                                     |     2|
+|68    |      SyncAsyncTready                                                                        |SyncAsync_0                                                   |     3|
+|69    |      SyncReset                                                                              |ResetBridge                                                   |     3|
+|70    |        SyncAsyncx                                                                           |SyncAsync_1                                                   |     3|
+|71    |    \YesAXILITE.AXI_Lite_Control                                                             |MIPI_CSI_2_RX_S_AXI_LITE                                      |   121|
+|72    |    \YesAXILITE.CoreSoftReset                                                                |ResetBridge__parameterized0                                   |     3|
+|73    |      SyncAsyncx                                                                             |SyncAsync__parameterized0                                     |     3|
+|74    |    \YesAXILITE.SyncAsyncClkEnable                                                           |SyncAsync__parameterized1                                     |     3|
++------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 848.203 ; gain = 535.836
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1118 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:01:52 . Memory (MB): peak = 848.203 ; gain = 535.836
+Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 848.203 ; gain = 535.836
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl:2]
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'U0/MIPI_CSI2_Rx_inst/LLP_inst/LineBufferFIFO/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 19 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 8 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 11 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+152 Infos, 225 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:02 ; elapsed = 00:02:07 . Memory (MB): peak = 1297.469 ; gain = 986.840
+INFO: [Common 17-1381] The checkpoint 'C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1/system_MIPI_CSI_2_RX_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/system_MIPI_CSI_2_RX_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 73 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1/system_MIPI_CSI_2_RX_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_MIPI_CSI_2_RX_0_0_utilization_synth.rpt -pb system_MIPI_CSI_2_RX_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1297.469 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  7 20:30:04 2019...

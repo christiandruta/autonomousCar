@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Apr  7 21:57:19 2019
+# Process ID: 1368
+# Current directory: C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7128 C:\Users\admin\repo\newrepo\Zybo-Z7-20-pcam-5c\proj\pcam-5c.xpr
+# Log file: C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/vivado.log
+# Journal file: C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_run impl_1
+file mkdir C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.sdk
+file copy -force C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.sysdef C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/hw_handoff/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/sdk -hwspec C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/hw_handoff/system_wrapper.hdf

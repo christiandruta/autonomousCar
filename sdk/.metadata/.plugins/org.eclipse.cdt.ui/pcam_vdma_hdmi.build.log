@@ -1,0 +1,24 @@
+12:15:21 **** Auto Build of configuration Debug for project pcam_vdma_hdmi ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/platform/platform.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -std=c++11 -c -fmessage-length=0 -MT"src/platform/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pcam_vdma_hdmi_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform/platform.d" -MT"src/platform/platform.o" -o "src/platform/platform.o" "../src/platform/platform.c"
+'Finished building: ../src/platform/platform.c'
+' '
+'Building file: ../src/ov5640/OV5640.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -std=c++11 -c -fmessage-length=0 -MT"src/ov5640/OV5640.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pcam_vdma_hdmi_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ov5640/OV5640.d" -MT"src/ov5640/OV5640.o" -o "src/ov5640/OV5640.o" "../src/ov5640/OV5640.cpp"
+In file included from ../../pcam_vdma_hdmi_bsp/ps7_cortexa9_0/include/xaxivdma_i.h:76:0,
+                 from ../../pcam_vdma_hdmi_bsp/ps7_cortexa9_0/include/xaxivdma.h:318,
+                 from ../src/ov5640/../hdmi/VideoOutput.h:15,
+                 from ../src/ov5640/OV5640.h:18,
+                 from ../src/ov5640/OV5640.cpp:8:
+../../pcam_vdma_hdmi_bsp/ps7_cortexa9_0/include/xdebug.h:1:1: error: unterminated comment
+ /******************************************************************************
+ ^
+make: *** [src/ov5640/OV5640.o] Error 1
+
+12:15:25 Build Finished (took 3s.285ms)
+

@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Apr  7 21:57:19 2019
+# Process ID: 1368
+# Current directory: C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7128 C:\Users\admin\repo\newrepo\Zybo-Z7-20-pcam-5c\proj\pcam-5c.xpr
+# Log file: C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/vivado.log
+# Journal file: C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Kits/Ti/beaglebone/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 870.543 ; gain = 222.023
+update_compile_order -fileset sources_1
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+launch_runs impl_1 -to_step write_bitstream
+[Sun Apr  7 22:05:29 2019] Launched synth_1...
+Run output will be captured here: C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/synth_1/runme.log
+[Sun Apr  7 22:05:30 2019] Launched impl_1...
+Run output will be captured here: C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 1097 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-1368-B114-S3/dcp19/system_wrapper_board.xdc]
+Finished Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-1368-B114-S3/dcp19/system_wrapper_board.xdc]
+Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-1368-B114-S3/dcp19/system_wrapper_early.xdc]
+Finished Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-1368-B114-S3/dcp19/system_wrapper_early.xdc]
+Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-1368-B114-S3/dcp19/system_wrapper.xdc]
+Finished Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-1368-B114-S3/dcp19/system_wrapper.xdc]
+Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-1368-B114-S3/dcp19/system_wrapper_late.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo_clocks.xdc:59]
+WARNING: [Timing 38-3] User defined clock exists on pin system_i/video_dynclk/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0 [See C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/constraints/timing.xdc:9] and will prevent any subsequent automatic derivation of generated clocks on that pin. [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo_clocks.xdc:59]
+WARNING: [Timing 38-3] User defined clock exists on pin system_i/DVIClocking_0/U0/PixelClkBuffer/O [See C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/constraints/timing.xdc:17] and will prevent any subsequent automatic derivation of generated clocks on that pin. [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo_clocks.xdc:59]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo_clocks.xdc:59]
+all_fanout: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1853.555 ; gain = 563.074
+Finished Parsing XDC File [C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-1368-B114-S3/dcp19/system_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1853.555 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1853.555 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 19 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 15 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+
+open_run: Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1893.633 ; gain = 980.895
+open_report: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2060.160 ; gain = 161.715
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+file mkdir C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.sdk
+file copy -force C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.sysdef C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/hw_handoff/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/sdk -hwspec C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/hw_handoff/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/sdk -hwspec C:/Users/admin/repo/newrepo/Zybo-Z7-20-pcam-5c/hw_handoff/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  7 23:31:34 2019...
