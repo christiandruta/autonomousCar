@@ -1,3 +1,4 @@
+
 #include "xparameters.h"
 
 #include "platform/platform.h"
@@ -93,24 +94,23 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	XSdPs_Config * SdConfig_0;
 	SdConfig_0 = XSdPs_LookupConfig(XPAR_PS7_SD_0_DEVICE_ID); //XPAR_PS7_SD_0_BASEADDR
 	if (NULL == SdConfig_0) {
-		print("failed !\n\r");
+		xil_printf("XSdPs_LookupConfig failed !\n\r");
 		return XST_FAILURE;
 	}
 
 	Status = XSdPs_CfgInitialize(&ps7_sd_0, SdConfig_0, SdConfig_0->BaseAddress);
 	if (Status != XST_SUCCESS) {
-		print("failed !\n\r");
-		print("Sd Config failed !\n\r");
+		xil_printf("failed !\n\r");
+		xil_printf("Sd Config failed !\n\r");
 		return XST_FAILURE;
 	}
 	Status = XSdPs_SdCardInitialize(&ps7_sd_0);
 	if (Status != XST_SUCCESS) {
-		print("failed !\n\r");
-		print("Sd0 Initialization failed !\n\r");
+		xil_printf("Sd0 Initialization failed !\n\r");
 		return XST_FAILURE;
 	}
 	else {
-		print("Sd0 Initialization succeed !\n\r");
+		xil_printf("Sd0 Initialization succeed !\n\r");
 	}
 	// read and write test
 
@@ -135,9 +135,9 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	 * Register volume work area, initialize device
 	 */
 	Res = f_mount(&fatfs, Path, 0);
-	print("f_mount failed !\n\r");
+	xil_printf("f_mount failed !\n\r");
 	if (Res != FR_OK) {
-		print("f_mount failed !\n\r");
+		xil_printf("f_mount failed !\n\r");
 		return XST_FAILURE;
 	}
 
@@ -146,9 +146,9 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	 * 0 - Cluster size is automatically determined based on Vol size.
 	 */
 	Res = f_mkfs(Path, 0, 0);
-	print("f_mkfs failed !\n\r");
+	xil_printf("f_mkfs failed !\n\r");
 	if (Res != FR_OK) {
-		print("f_mkfs failed !\n\r");
+		xil_printf("f_mkfs failed !\n\r");
 		return XST_FAILURE;
 	}
 
@@ -161,9 +161,9 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	SD_File = (char *)FileName;
 
 	Res = f_open(&fil, SD_File, FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
-	print("f_open failed !\n\r");
+	xil_printf("f_open failed !\n\r");
 	if (Res) {
-		print("f_open failed !\n\r");
+		xil_printf("f_open failed !\n\r");
 		return XST_FAILURE;
 	}
 
@@ -171,9 +171,9 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	 * Pointer to beginning of file .
 	 */
 	Res = f_lseek(&fil, 0);
-	print("f_lseek failed !\n\r");
+	xil_printf("f_lseek failed !\n\r");
 	if (Res) {
-		print("f_lseek failed !\n\r");
+		xil_printf("f_lseek failed !\n\r");
 		return XST_FAILURE;
 	}
 
@@ -182,9 +182,9 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	 */
 	Res = f_write(&fil, (const void*)SourceAddress, FileSize,
 			&NumBytesWritten);
-	print("f_mkfs failed !\n\r");
+	xil_printf("f_mkfs failed !\n\r");
 	if (Res) {
-		print("f_mkfs failed !\n\r");
+		xil_printf("f_mkfs failed !\n\r");
 		return XST_FAILURE;
 	}
 
@@ -192,9 +192,9 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	 * Pointer to beginning of file .
 	 */
 	Res = f_lseek(&fil, 0);
-	print("f_lseek failed !\n\r");
+	xil_printf("f_lseek failed !\n\r");
 	if (Res) {
-		print("f_lseek failed !\n\r");
+		xil_printf("f_lseek failed !\n\r");
 		return XST_FAILURE;
 	}
 
@@ -203,26 +203,26 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	 */
 	Res = f_read(&fil, (void*)DestinationAddress, FileSize,
 			&NumBytesRead);
-	print("f_read failed !\n\r");
+	xil_printf("f_read failed !\n\r");
 	if (Res) {
-		print("f_read failed !\n\r");
+		xil_printf("f_read failed !\n\r");
 		return XST_FAILURE;
 	}
 
 	/*
 	 * Close file.
 	 */
-	print("f_close failed !\n\r");
+	xil_printf("f_close failed !\n\r");
 	Res = f_close(&fil);
 	if (Res) {
+		xil_printf("f_close failed !\n\r");
 		return XST_FAILURE;
-		print("f_close failed !\n\r");
 	}
 	/*
 	 * Data verification
 	 */
-	if (memcmp(SourceAddress,DestinationAddress,FileSize))
-			return XST_FAILURE;
+	//if (memcmp(SourceAddress,DestinationAddress,FileSize))
+	//		return XST_FAILURE;
 	//for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
 	//	if((u8*)SourceAddress[BuffCnt] != (u8*)DestinationAddress[BuffCnt]){
 	//		return XST_FAILURE;
