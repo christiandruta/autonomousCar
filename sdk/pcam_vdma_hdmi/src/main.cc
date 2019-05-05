@@ -1,4 +1,5 @@
 
+
 #include "xparameters.h"
 
 #include "platform/platform.h"
@@ -84,7 +85,7 @@ void stop_camera(AXI_VDMA<ScuGicInterruptController>& vdma_driver,OV5640& cam)
 	}
 }
 
-int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize = (8*1024*1024))
+int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize = (8*1024*1024),TCHAR *Path = "0:/")
 //DestinationAddress - for checking of writing to SD card
 {
 
@@ -95,19 +96,19 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	SdConfig_0 = XSdPs_LookupConfig(XPAR_PS7_SD_0_DEVICE_ID); //XPAR_PS7_SD_0_BASEADDR
 	if (NULL == SdConfig_0) {
 		xil_printf("XSdPs_LookupConfig failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 
 	Status = XSdPs_CfgInitialize(&ps7_sd_0, SdConfig_0, SdConfig_0->BaseAddress);
 	if (Status != XST_SUCCESS) {
 		xil_printf("failed !\n\r");
 		xil_printf("Sd Config failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 	Status = XSdPs_SdCardInitialize(&ps7_sd_0);
 	if (Status != XST_SUCCESS) {
 		xil_printf("Sd0 Initialization failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 	else {
 		xil_printf("Sd0 Initialization succeed !\n\r");
@@ -116,7 +117,7 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 
 
 
-	TCHAR *Path = "0:/";
+
 
 	static char FileName[32] = "Test.bin";
 	static char *SD_File;
@@ -138,9 +139,11 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	xil_printf("f_mount failed !\n\r");
 	if (Res != FR_OK) {
 		xil_printf("f_mount failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
+	xil_printf("FATFS type= %d\n\r",fatfs.fs_type);
 
+	xil_printf("FATFS drv number= %d\n\r",fatfs.drv);
 	/*
 	 * Path - Path to logical driver, 0 - FDISK format.
 	 * 0 - Cluster size is automatically determined based on Vol size.
@@ -149,7 +152,7 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	xil_printf("f_mkfs failed !\n\r");
 	if (Res != FR_OK) {
 		xil_printf("f_mkfs failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 
 	/*
@@ -164,7 +167,7 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	xil_printf("f_open failed !\n\r");
 	if (Res) {
 		xil_printf("f_open failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 
 	/*
@@ -174,7 +177,7 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	xil_printf("f_lseek failed !\n\r");
 	if (Res) {
 		xil_printf("f_lseek failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 
 	/*
@@ -182,10 +185,17 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	 */
 	Res = f_write(&fil, (const void*)SourceAddress, FileSize,
 			&NumBytesWritten);
-	xil_printf("f_mkfs failed !\n\r");
+	xil_printf("f_write failed !\n\r");
 	if (Res) {
-		xil_printf("f_mkfs failed !\n\r");
-		return XST_FAILURE;
+		xil_printf("f_write failed !\n\r");
+		//return XST_FAILURE;
+	}
+
+	Res = f_sync(&fil);
+	xil_printf("f_sync failed !\n\r");
+	if (Res) {
+		xil_printf("f_sync failed !\n\r");
+		//return XST_FAILURE;
 	}
 
 	/*
@@ -195,7 +205,7 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	xil_printf("f_lseek failed !\n\r");
 	if (Res) {
 		xil_printf("f_lseek failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 
 	/*
@@ -206,7 +216,7 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	xil_printf("f_read failed !\n\r");
 	if (Res) {
 		xil_printf("f_read failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 
 	/*
@@ -216,16 +226,22 @@ int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize =
 	Res = f_close(&fil);
 	if (Res) {
 		xil_printf("f_close failed !\n\r");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
+
+
+	//*Path = "1:/new";
+	//FRESULT f_mkdir (const TCHAR* path);
+	//FRESULT f_opendir (DIR* dp, const TCHAR* path);						/* Open a directory */
+	//FRESULT f_closedir (DIR* dp);										/* Close an open directory */
 	/*
 	 * Data verification
 	 */
 	//if (memcmp(SourceAddress,DestinationAddress,FileSize))
-	//		return XST_FAILURE;
+	//		//return XST_FAILURE;
 	//for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
 	//	if((u8*)SourceAddress[BuffCnt] != (u8*)DestinationAddress[BuffCnt]){
-	//		return XST_FAILURE;
+	//		//return XST_FAILURE;
 	//	}
 	//}
 
@@ -267,8 +283,10 @@ int main()
 
 
 	xil_printf("\r\nSTART WRITE TO SDCARD\r\n");
-	long int ret = write_to_SD_CARD((void*)allram,(void*)(u32*)(MEM_BASE_ADDR+(8*1024*1024) ),FRAME_TOTAL);
-	xil_printf("write_to_SD_CARD=%d\r\n",ret);
+	//long int ret = write_to_SD_CARD((void*)allram,(void*)(u32*)(MEM_BASE_ADDR+(8*1024*1024) ),FRAME_TOTAL);
+	//xil_printf("write_to_SD_CARD=%d\r\n",ret);
+	long int  ret1 = write_to_SD_CARD((void*)allram,(void*)(u32*)(MEM_BASE_ADDR+(8*1024*1024) ),FRAME_TOTAL,"1:/");
+	xil_printf("write_to_SD_CARD=%d\r\n",ret1);
 
 	xil_printf("\r\nFINISHED\r\n");
 	getchar();
@@ -281,6 +299,25 @@ int main()
 			allram++;
 		}
 		xil_printf("\r\nFINISHED\r\n");
+		getchar();
+		allram = (volatile u32 *)MEM_BASE_ADDR+FRAME_TOTAL*2;//XPAR_DDR_MEM_BASEADDR;
+		for (unsigned  int i=0; i<=FRAME_TOTAL; i++ )
+		{
+			xil_printf("%u",*allram);
+			allram++;
+		}
+		xil_printf("\r\nFINISHED\r\n");
+
+
+
+		allram = (volatile u32 *)MEM_BASE_ADDR+FRAME_TOTAL*4;//XPAR_DDR_MEM_BASEADDR;
+		for (unsigned  int i=0; i<=FRAME_TOTAL; i++ )
+		{
+			xil_printf("%u",*allram);
+			allram++;
+		}
+		xil_printf("\r\nFINISHED\r\n");
+
 		getchar();
 		while (1)
 		{
