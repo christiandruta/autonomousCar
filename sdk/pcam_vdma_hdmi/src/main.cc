@@ -9,8 +9,12 @@
 
 #include "MIPI_D_PHY_RX.h"
 #include "MIPI_CSI_2_RX.h"
-
-
+#define FILE_SYSTEM_USE_MKFS
+#undef FILE_SYSTEM_READ_ONLY
+#include <ff.h>
+#include <xsdps.h>
+#include <xil_cache.h>
+#include <xplatform_info.h>
 #define IRPT_CTL_DEVID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
 #define GPIO_DEVID			XPAR_PS7_GPIO_0_DEVICE_ID
 #define GPIO_IRPT_ID			XPAR_PS7_GPIO_0_INTR
@@ -69,7 +73,165 @@ void pipeline_mode_change(AXI_VDMA<ScuGicInterruptController>& vdma_driver, OV56
 		vdma_driver.enableRead();
 	}
 }
+void stop_camera(AXI_VDMA<ScuGicInterruptController>& vdma_driver,OV5640& cam)
+{
+	{
+	vdma_driver.resetWrite();
+	MIPI_CSI_2_RX_mWriteReg(XPAR_MIPI_CSI_2_RX_0_S_AXI_LITE_BASEADDR, CR_OFFSET, (CR_RESET_MASK & ~CR_ENABLE_MASK));
+	MIPI_D_PHY_RX_mWriteReg(XPAR_MIPI_D_PHY_RX_0_S_AXI_LITE_BASEADDR, CR_OFFSET, (CR_RESET_MASK & ~CR_ENABLE_MASK));
+	cam.reset();
+	}
+}
 
+int write_to_SD_CARD(void* SourceAddress,void* DestinationAddress,u32 FileSize = (8*1024*1024))
+//DestinationAddress - for checking of writing to SD card
+{
+
+	int Status;
+	// SDIO Controller Test
+	static XSdPs ps7_sd_0;
+	XSdPs_Config * SdConfig_0;
+	SdConfig_0 = XSdPs_LookupConfig(XPAR_PS7_SD_0_DEVICE_ID); //XPAR_PS7_SD_0_BASEADDR
+	if (NULL == SdConfig_0) {
+		print("failed !\n\r");
+		return XST_FAILURE;
+	}
+
+	Status = XSdPs_CfgInitialize(&ps7_sd_0, SdConfig_0, SdConfig_0->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		print("failed !\n\r");
+		print("Sd Config failed !\n\r");
+		return XST_FAILURE;
+	}
+	Status = XSdPs_SdCardInitialize(&ps7_sd_0);
+	if (Status != XST_SUCCESS) {
+		print("failed !\n\r");
+		print("Sd0 Initialization failed !\n\r");
+		return XST_FAILURE;
+	}
+	else {
+		print("Sd0 Initialization succeed !\n\r");
+	}
+	// read and write test
+
+
+
+	TCHAR *Path = "0:/";
+
+	static char FileName[32] = "Test.bin";
+	static char *SD_File;
+	static FIL fil;		/* File object */
+	static FATFS fatfs;
+	FRESULT Res;
+	UINT NumBytesRead;
+	UINT NumBytesWritten;
+
+
+	//for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
+	//	SourceAddress[BuffCnt] = TEST + BuffCnt;
+	//}
+
+	/*
+	 * Register volume work area, initialize device
+	 */
+	Res = f_mount(&fatfs, Path, 0);
+	print("f_mount failed !\n\r");
+	if (Res != FR_OK) {
+		print("f_mount failed !\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Path - Path to logical driver, 0 - FDISK format.
+	 * 0 - Cluster size is automatically determined based on Vol size.
+	 */
+	Res = f_mkfs(Path, 0, 0);
+	print("f_mkfs failed !\n\r");
+	if (Res != FR_OK) {
+		print("f_mkfs failed !\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Open file with required permissions.
+	 * Here - Creating new file with read/write permissions. .
+	 * To open file with write permissions, file system should not
+	 * be in Read Only mode.
+	 */
+	SD_File = (char *)FileName;
+
+	Res = f_open(&fil, SD_File, FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+	print("f_open failed !\n\r");
+	if (Res) {
+		print("f_open failed !\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Pointer to beginning of file .
+	 */
+	Res = f_lseek(&fil, 0);
+	print("f_lseek failed !\n\r");
+	if (Res) {
+		print("f_lseek failed !\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Write data to file.
+	 */
+	Res = f_write(&fil, (const void*)SourceAddress, FileSize,
+			&NumBytesWritten);
+	print("f_mkfs failed !\n\r");
+	if (Res) {
+		print("f_mkfs failed !\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Pointer to beginning of file .
+	 */
+	Res = f_lseek(&fil, 0);
+	print("f_lseek failed !\n\r");
+	if (Res) {
+		print("f_lseek failed !\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Read data from file.
+	 */
+	Res = f_read(&fil, (void*)DestinationAddress, FileSize,
+			&NumBytesRead);
+	print("f_read failed !\n\r");
+	if (Res) {
+		print("f_read failed !\n\r");
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Close file.
+	 */
+	print("f_close failed !\n\r");
+	Res = f_close(&fil);
+	if (Res) {
+		return XST_FAILURE;
+		print("f_close failed !\n\r");
+	}
+	/*
+	 * Data verification
+	 */
+	if (memcmp(SourceAddress,DestinationAddress,FileSize))
+			return XST_FAILURE;
+	//for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
+	//	if((u8*)SourceAddress[BuffCnt] != (u8*)DestinationAddress[BuffCnt]){
+	//		return XST_FAILURE;
+	//	}
+	//}
+
+
+	return XST_SUCCESS;
+}
 int main()
 {
 	init_platform();
@@ -84,11 +246,46 @@ int main()
 			VDMA_S2MM_IRPT_ID);
 	VideoOutput vid(XPAR_VTC_0_DEVICE_ID, XPAR_VIDEO_DYNCLK_DEVICE_ID);
 
+	//xil_printf("before pipeline_mode_change\r\n");
 	//pipeline_mode_change(vdma_driver, cam, vid, Resolution::R1920_1080_60_PP, OV5640_cfg::mode_t::MODE_1080P_1920_1080_30fps);
 	//pipeline_mode_change(vdma_driver, cam, vid, Resolution::R1280_720_60_PP,OV5640_cfg::mode_t::MODE_720P_1280_720_60fps);
 	pipeline_mode_change(vdma_driver, cam, vid, Resolution::R640_480_60_NN,OV5640_cfg::mode_t::MODE_720P_1280_720_60fps);
 
-	xil_printf("Video init done.\r\n");
+
+	//cam.set_isp_format(OV5640_cfg::isp_format_t::ISP_RGB);
+	//cam.set_isp_format(OV5640_cfg::isp_format_t::ISP_RAW);
+
+
+	cam.set_isp_format(OV5640_cfg::isp_format_t::ISP_RGB);
+
+
+	xil_printf("\r\nCAMERA STARTED\r\n");
+	stop_camera(vdma_driver,cam);
+	xil_printf("\r\nCAMERA STOPPED\r\n");
+	volatile u32 *allram = (volatile u32 *)MEM_BASE_ADDR;//XPAR_DDR_MEM_BASEADDR;
+#define FRAME_TOTAL (720*1280*3)
+
+
+	xil_printf("\r\nSTART WRITE TO SDCARD\r\n");
+	long int ret = write_to_SD_CARD((void*)allram,(void*)(u32*)(MEM_BASE_ADDR+(8*1024*1024) ),FRAME_TOTAL);
+	xil_printf("write_to_SD_CARD=%d\r\n",ret);
+
+	xil_printf("\r\nFINISHED\r\n");
+	getchar();
+	//write ram to UART
+	while (1)
+	{
+		for (unsigned  int i=0; i<=FRAME_TOTAL; i++ )
+		{
+			xil_printf("%u",*allram);
+			allram++;
+		}
+		xil_printf("\r\nFINISHED\r\n");
+		getchar();
+		while (1)
+		{
+		}
+	}
 
 
 	// Liquid lens control

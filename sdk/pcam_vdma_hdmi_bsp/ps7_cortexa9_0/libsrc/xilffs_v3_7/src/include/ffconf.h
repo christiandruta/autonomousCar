@@ -20,12 +20,14 @@ extern "C" {
 /  file object. For file data transfer, FatFs uses the common sector buffer in
 /  the file system object (FATFS) instead of private sector buffer eliminated
 /  from the file object (FIL). */
-
+#if 0
 #ifdef FILE_SYSTEM_READ_ONLY
 #define _FS_READONLY	1	/* 1:Read only */
 #else
 #define _FS_READONLY	0	/* 0:Read/Write */
 #endif
+#endif
+#define _FS_READONLY	0	/* 0:Read/Write */
 /* Setting _FS_READONLY to 1 defines read only configuration. This removes
 /  writing functions, f_write(), f_sync(), f_unlink(), f_mkdir(), f_chmod(),
 /  f_rename(), f_truncate() and useless f_getfree(). */
@@ -48,14 +50,15 @@ extern "C" {
 #define	_USE_STRFUNC	2	/* 2:Enable */
 #endif
 /* To enable string functions, set _USE_STRFUNC to 1 or 2. */
-
+#if 0
 #ifdef FILE_SYSTEM_USE_MKFS
 #define	_USE_MKFS		1	/* 1:Enable */
 #else
 #define	_USE_MKFS		0	/* 0:Disable */
 #endif
+#endif
 /* To enable f_mkfs() function, set _USE_MKFS to 1 and set _FS_READONLY to 0 */
-
+#define	_USE_MKFS		1	/* 1:Enable */
 
 #define	_USE_FASTSEEK	0	/* 0:Disable or 1:Enable */
 /* To enable fast seek feature, set _USE_FASTSEEK to 1. */

@@ -265,6 +265,12 @@ FRESULT f_setlabel (const TCHAR* label);							/* Set volume label */
 #endif
 #endif
 FRESULT f_mount (FATFS* fs, const TCHAR* path, BYTE opt);			/* Mount/Unmount a logical drive */
+#if !_USE_MKFS
+#warning "_USE_MKFS =0"
+#endif
+#if _FS_READONLY
+#warning "_FS_READONLY =1"
+#endif
 #if _USE_MKFS && !_FS_READONLY
 FRESULT f_mkfs (const TCHAR* path, BYTE sfd, UINT au);				/* Create a file system on the volume */
 #if _MULTI_PARTITION
