@@ -32,6 +32,32 @@
 
 #define GAMMA_BASE_ADDR     XPAR_AXI_GAMMACORRECTION_0_BASEADDR
 
+void sleep(unsigned int ms=100)
+{
+
+#if 0
+	DWORD big_loop = (useconds * CPU_SPEED_MHZ)/50; ///< because of the inner loop 50Mhz is about 1us
+	    WORD small_loop = 13;   ///< 13 times the inner loop is around 1us
+
+	    asm
+	    (
+	      "       addik r20, r0, 1                       \n\t"    // fill r20 with decrement value
+	      "outer_loop: rsub %0, r20, %0    \n\t"
+	      "inner_loop: rsub %1, r20, %1    \n\t"    //1 cycle
+	      "       nop                                           \n\t"    //1 cycle
+	      "       bnei %1, inner_loop             \n\t"    //3 cycles
+	      "       addik %1, r0, 13                    \n\t"
+	      "       bnei %0, outer_loop            \n\t"
+	          : /* no output registers */
+	          : "r"(big_loop), "r"(small_loop)
+	          : "%r20"
+	    );
+#endif
+	for (unsigned long int i = 0; i<ms*1000;ms++)
+	{
+		asm("       nop                                           \n\t");
+	}
+}
 using namespace digilent;
 
 void pipeline_mode_change(AXI_VDMA<ScuGicInterruptController>& vdma_driver, OV5640& cam, VideoOutput& vid, Resolution res, OV5640_cfg::mode_t mode)
