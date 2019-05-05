@@ -1,0 +1,3 @@
+-PCam mod 5C
+-SD Card
+-Arduino for controlling motors
