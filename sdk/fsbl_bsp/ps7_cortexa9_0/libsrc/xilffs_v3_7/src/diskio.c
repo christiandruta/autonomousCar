@@ -463,6 +463,7 @@ DWORD get_fattime (void)
 * @note
 *
 ******************************************************************************/
+#include "sleep.h"
 DRESULT disk_write (
 	BYTE pdrv,			/* Physical drive nmuber (0..) */
 	const BYTE *buff,	/* Data to be written */
@@ -488,7 +489,7 @@ DRESULT disk_write (
 	if ((SdInstance[pdrv].HCS) == 0U) {
 		LocSector *= (DWORD)XSDPS_BLK_SIZE_512_MASK;
 	}
-
+	usleep(200);
 	Status  = XSdPs_WritePolled(&SdInstance[pdrv], (u32)LocSector, count, buff);
 	if (Status != XST_SUCCESS) {
 		return RES_ERROR;
