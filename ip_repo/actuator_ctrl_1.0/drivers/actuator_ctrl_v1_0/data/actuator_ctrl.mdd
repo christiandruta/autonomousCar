@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER actuator_ctrl
+	OPTION supported_peripherals = (actuator_ctrl);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = actuator_ctrl;
+END DRIVER
